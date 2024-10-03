@@ -1,0 +1,19 @@
+{
+  "name": "prisma-sqlite-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc main.ts /dist"
+  },
+  "author": "Jitendra Nirnejak",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@fastify/mongodb": "^8.0.0",
+    "fastify": "^4.28.1"
+  }
+}
