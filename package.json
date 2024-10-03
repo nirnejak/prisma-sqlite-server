@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc main.ts /dist"
+    "start": "node dist/index.js",
+    "dev": "nodemon main.ts",
+    "build": "tsc -p ."
   },
   "author": "Jitendra Nirnejak",
   "license": "MIT",
   "devDependencies": {
+    "nodemon": "^3.1.7",
     "prisma": "^5.20.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.6.2"
   },
   "dependencies": {
