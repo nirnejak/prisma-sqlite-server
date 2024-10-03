@@ -10,10 +10,11 @@
   "author": "Jitendra Nirnejak",
   "license": "MIT",
   "devDependencies": {
-    "typescript": "^5.5.4"
+    "prisma": "^5.20.0",
+    "typescript": "^5.6.2"
   },
   "dependencies": {
-    "@fastify/mongodb": "^8.0.0",
-    "fastify": "^4.28.1"
+    "@prisma/client": "^5.20.0",
+    "fastify": "^5.0.0"
   }
 }
