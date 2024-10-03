@@ -5,8 +5,6 @@ import { userRoutes } from "./routes/userRoute";
 
 const environment = "development";
 
-import fastifyMongo from "@fastify/mongodb";
-
 const fastify = Fastify({
   // logger: envToLogger[environment] ?? true,
   logger: true,
@@ -17,7 +15,7 @@ fastify.addHook("onRequest", async () => {
 });
 
 fastify.addHook("onResponse", async (request, reply: FastifyReply) => {
-  fastify.log.info(`Responding ${reply.getResponseTime()}`);
+  fastify.log.info(`Responding`);
 });
 
 fastify.get("/", async () => {
@@ -25,14 +23,6 @@ fastify.get("/", async () => {
     message: "Hello Fastify!",
   };
 });
-
-async function dbConnector(fastify: FastifyInstance, options) {
-  fastify.register(fastifyMongo, {
-    url: "mongodb://localhost:27017/fastify",
-  });
-
-  fastify.log.info("Connected to database", options);
-}
 
 fastify.register(userRoutes, {
   prefix: "/api/users",
